@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,19 +32,27 @@
                                 <rect key="frame" x="53" y="529" width="269" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPp-Kv-Hre">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPp-Kv-Hre">
+                                <rect key="frame" x="47.5" y="0.0" width="280" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="ClB-Yk-2vP"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PFS-BZ-GZz" secondAttribute="bottom" id="69n-Ts-lGo"/>
+                            <constraint firstItem="VPp-Kv-Hre" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FaM-GT-KhZ"/>
+                            <constraint firstItem="VPp-Kv-Hre" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IXA-rW-6Lw"/>
                             <constraint firstItem="PFS-BZ-GZz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NRX-P6-Qgl"/>
                             <constraint firstAttribute="trailing" secondItem="PFS-BZ-GZz" secondAttribute="trailing" id="SHo-2m-mwH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VPp-Kv-Hre" secondAttribute="bottom" id="uTV-ul-sT1"/>
                             <constraint firstItem="PFS-BZ-GZz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vmz-Vz-Uez"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="VPp-Kv-Hre" id="AZv-ku-CQf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
